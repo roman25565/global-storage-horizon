@@ -1,0 +1,13 @@
+[package]
+name = "global-storage-core"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+description = "Global Storage for Horizon: the storage, search, sorting and menu layout, without the game"
+
+[lib]
+path = "src/lib.rs"
+
+# Only crates already in Horizon's Cargo.lock (horizon-mixins refuses others).
+[dependencies]
+toml = "1.1.6"

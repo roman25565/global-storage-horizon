@@ -1,0 +1,36 @@
+# Global Storage: one big storage players fill and empty from a chest menu (/gs).
+# Written with these defaults on the first start; edit it and restart the server.
+
+# "global": one storage shared by every player (default).
+# "player": every player has a storage of their own.
+mode = "global"
+
+# The menu's title.
+title = "Глобальне сховище"
+
+# Who may open the storage: 0 everyone, 2 operators only (vanilla permission levels).
+permission = 0
+
+# How many different item types the storage holds; 0 is no limit.
+# There is no limit on how many items of one type it holds.
+max_types = 0
+
+# The "deposit" button also takes the hotbar (slots 1-9). Off by default so the
+# tools in your hands stay with you.
+deposit_hotbar = false
+
+# Items that never go in: exact ids ("minecraft:bedrock") or a whole mod ("somemod:*").
+# Shulker boxes and bundles are allowed: their contents are kept as they are.
+blacklist = []
+
+# Seconds between saves of a changed storage (also saved with the world and on stop).
+save_every = 5
+
+# The biggest one item may be, in KiB of its saved form (a book full of text, a shulker full
+# of books are big). Bigger items are refused. 0 is no limit.
+max_item_kb = 128
+
+# The biggest the storage's file may grow, in MiB. When it is reached, new kinds of items are
+# refused (more of the kinds already there still go in). Every save writes the whole file on
+# the server's tick, so a big file is lag: 16 MiB takes about 30 ms. 0 is no limit.
+max_storage_mb = 16
